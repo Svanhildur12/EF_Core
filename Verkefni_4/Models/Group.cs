@@ -6,7 +6,7 @@ public class Group
 {
     public int GroupId { get; set; }
     
-    public required string Name { get; set; }
+    public string Name { get; set; }
 
-    public required ICollection<Student> Students { get; set; } = null!;
+    public List<Student> Students { get; set; } = new List<Student>();
 }

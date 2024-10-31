@@ -7,10 +7,10 @@ namespace Verkefni_4.Models;
 public class Teacher
 {
     public int TeacherId { get; set; }
-    [Column(TypeName = "varchar(256)")]
-    public required string FirstName { get; set; }
-    [Column(TypeName = "varchar(256)")]
-    public required string LastName { get; set; }
+   [MaxLength(256)]
+    public string FirstName { get; set; }
+    [MaxLength(256)]
+    public string LastName { get; set; }
 
-    public List<Subject> Subjects { get; set; }
+    public List<Subject> Subjects { get; set; } = new List<Subject>();
 }

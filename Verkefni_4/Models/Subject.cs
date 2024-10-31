@@ -7,10 +7,9 @@ namespace Verkefni_4.Models;
 public class Subject
 {
     public int SubjectId { get; set; }
-    [Column(TypeName = "varchar(100)"), Required]
-    public required string Title { get; set; }
+    public string Title { get; set; }
 
-    public required List<Teacher>? Teachers { get; set; } 
+    public List<Teacher> Teachers { get; set; } = new List<Teacher>();
 
 
 }

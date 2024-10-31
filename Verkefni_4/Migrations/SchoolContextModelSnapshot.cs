@@ -82,14 +82,14 @@ namespace Verkefni_4.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("GroupId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("StudentId");
 
@@ -106,7 +106,7 @@ namespace Verkefni_4.Migrations
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("SubjectId");
 
@@ -121,11 +121,13 @@ namespace Verkefni_4.Migrations
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("varchar(256)");
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("varchar(256)");
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT");
 
                     b.HasKey("TeacherId");
 
